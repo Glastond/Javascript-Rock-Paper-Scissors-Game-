@@ -31,6 +31,14 @@ var convertToWord = letter => {
   }
 };
 
+// Adding And Removing ClassLists
+var addRemoveClass = x => {
+  scoreBoard_div.classList.add(x);
+  setTimeout(() => {
+    scoreBoard_div.classList.remove(x);
+  }, 300);
+};
+
 // If User Wins.
 var win = (userChoice, ComputerChoice) => {
   userScore++;
@@ -40,6 +48,8 @@ var win = (userChoice, ComputerChoice) => {
   )}${smallUserWord} beats ${convertToWord(
     ComputerChoice
   )}${smallCompWord}. You Win! 🔥 `;
+
+  addRemoveClass("green_glow");
 };
 
 // If User Loses
@@ -51,6 +61,7 @@ var lose = (userChoice, ComputerChoice) => {
   )}${smallUserWord} Loses To ${convertToWord(
     ComputerChoice
   )}${smallCompWord}. You Lost..`;
+  addRemoveClass("red_glow");
 };
 
 // If It's a Draw
@@ -61,6 +72,7 @@ var draw = (userChoice, ComputerChoice) => {
   )}${smallUserWord} Equals ${convertToWord(
     ComputerChoice
   )}${smallCompWord}. It's A Draw! `;
+  addRemoveClass("gray_glow");
 };
 
 // Main Game Logic.
@@ -85,15 +97,15 @@ var game = userChoice => {
 
 // All the Eventlisteners.
 function main() {
-  rock_div.addEventListener("click", function() {
+  rock_div.addEventListener("click", () => {
     game("r");
   });
 
-  paper_div.addEventListener("click", function() {
+  paper_div.addEventListener("click", () => {
     game("p");
   });
 
-  scissors_div.addEventListener("click", function() {
+  scissors_div.addEventListener("click", () => {
     game("s");
   });
 }

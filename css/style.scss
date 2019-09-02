@@ -27,7 +27,7 @@ header {
 }
 
 .score-board {
-  border: 1px solid white;
+  border: 4px solid white;
   width: 200px;
   margin: 20px auto;
   color: white;
@@ -37,6 +37,7 @@ header {
   padding: 15px 20px;
   font-family: $primary-font;
   position: relative;
+  transition: all 0.3s ease-in-out;
 
   .badge {
     background: #e15861;
@@ -92,8 +93,26 @@ header {
   }
 }
 
-.action-message {
+#action-message {
   text-align: center;
   color: white;
   font-family: $primary-font;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+// extra styling
+
+.green_glow {
+  border: 4px solid #4dcc7d;
+  box-shadow: 0 0 10px#31b43a;
+}
+
+.red_glow {
+  border: 4px solid #fc121b;
+  box-shadow: 0 0 10px #d01115;
+}
+.gray_glow {
+  border: 4px solid #464647;
+  box-shadow: 0 0 10px #25292b;
 }
