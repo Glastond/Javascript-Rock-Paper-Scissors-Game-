@@ -72,7 +72,8 @@ header {
 .choices {
   text-align: center;
   margin: 70px 0;
-
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
   img {
     width: 100px;
     height: 100px;
@@ -99,6 +100,50 @@ header {
   font-family: $primary-font;
   font-weight: bold;
   font-size: 20px;
+  opacity: 0;
+}
+
+// Instructions
+#instruction {
+  color: white;
+  font-family: $primary-font;
+  //text-align: center;
+  border: 3px solid #e15861;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  line-height: 30px;
+  justify-content: left;
+  transition: all 1s ease-in-out;
+
+  ul {
+    list-style-type: square;
+    padding-left: 15%;
+  }
+
+  button {
+    margin-left: 38%;
+    margin-top: 10%;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 25px;
+    background: white;
+    border: none;
+    color: #262632;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// To Hide Instrusctions and How Choices
+.hide {
+  display: none;
+}
+
+.show {
+  opacity: 1;
 }
 
 // extra styling

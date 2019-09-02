@@ -12,6 +12,11 @@ const scissors_div = document.getElementById("s");
 const smallUserWord = "User".fontsize(3).sub();
 const smallCompWord = "Comp".fontsize(3).sub();
 
+const startButton = document.getElementById("start-button");
+const instructions = document.getElementById("instruction");
+const choices_div = document.querySelector(".choices");
+const actionMessage_div = document.getElementById("action-message");
+
 // Randomly returning Computer Choice
 const getComputerChoice = () => {
   const choices = ["r", "p", "s"];
@@ -110,3 +115,10 @@ function main() {
   });
 }
 main();
+
+// To Hide The Instructions
+startButton.addEventListener("click", () => {
+  instructions.classList.add("hide");
+  choices_div.style.opacity = 1;
+  actionMessage_div.style.opacity = 1;
+});

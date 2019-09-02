@@ -71,6 +71,9 @@ header h1 {
 .choices {
   text-align: center;
   margin: 70px 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .choices img {
@@ -99,6 +102,50 @@ header h1 {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 20px;
+  opacity: 0;
+}
+
+#instruction {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border: 3px solid #e15861;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  line-height: 30px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#instruction ul {
+  list-style-type: square;
+  padding-left: 15%;
+}
+
+#instruction button {
+  margin-left: 38%;
+  margin-top: 10%;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 25px;
+  background: white;
+  border: none;
+  color: #262632;
+}
+
+#instruction button:hover {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  opacity: 1;
 }
 
 .green_glow {
