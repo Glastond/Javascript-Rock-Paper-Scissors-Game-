@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 
+// Variables
+$linear-gradient: linear-gradient(91deg, #ffe53b 0%, #ff2525 74%);
+$primary-font: "Poppins", sans-serif;
+
 * {
   margin: 0%;
   padding: 0%;
@@ -17,7 +21,79 @@ header {
   h1 {
     color: #25272e;
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: $primary-font;
     font-weight: 700;
   }
+}
+
+.score-board {
+  border: 1px solid white;
+  width: 200px;
+  margin: 20px auto;
+  color: white;
+  font-size: 40px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 15px 20px;
+  font-family: $primary-font;
+  position: relative;
+
+  .badge {
+    background: #e15861;
+    columns: white;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: $primary-font;
+  }
+
+  #user-label {
+    position: absolute;
+    top: 30px;
+    left: -25px;
+  }
+
+  #computer-label {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+  }
+}
+
+.results {
+  font-size: 40px;
+  color: white;
+  & > p {
+    text-align: center;
+    font-family: $primary-font;
+  }
+}
+
+.choices {
+  text-align: center;
+  margin: 70px 0;
+
+  img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .choice {
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 0px 20px;
+    transition: all 1s ease;
+
+    &:hover {
+      cursor: pointer;
+      background: $linear-gradient;
+    }
+  }
+}
+
+.action-message {
+  text-align: center;
+  color: white;
+  font-family: $primary-font;
 }
